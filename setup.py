@@ -2,14 +2,13 @@ import os
 
 from setuptools import setup, find_packages
 
-NAME = "aio_geojson_flightairmap"
+NAME = "aio_readsb"
 AUTHOR = "Mark Kuchel"
 AUTHOR_EMAIL = "mark@kuchel.net"
-DESCRIPTION = "An async GeoJSON client library for planes using information from a Flight Air Map server."
-URL = "https://github.com/kuchel77/python-aio-geojson-flightairmap"
+DESCRIPTION = "An async client library for planes using information."
+URL = "https://github.com/kuchel77/python-aio-readsb"
 
 REQUIRES = [
-    'aio_geojson_client>=0.11',
     'aiohttp>=3.5.4',
     'pytz>=2019.01',
 ]

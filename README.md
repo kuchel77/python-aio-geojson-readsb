@@ -1,16 +1,13 @@
-# python-aio-geojson-flightairmap
+# python-aio-geojson-readsb
 
-[![Build Status](https://travis-ci.org/kuchel77/python-aio-geojson-flighairmap.svg)](https://travis-ci.org/kuchel77/python-aio-geojson-flightairmap)
-[![Coverage Status](https://coveralls.io/repos/github/kuchel77/python-aio-geojson-flightairmap/badge.svg?branch=master)](https://coveralls.io/github/exxamalte/python-aio-geojson-flightairmap?branch=master)
-[![PyPi](https://img.shields.io/pypi/v/aio-geojson-flightairmap.svg)](https://pypi.python.org/pypi/aio-geojson-flightairmap)
-[![Version](https://img.shields.io/pypi/pyversions/aio-geojson-flightairmap.svg)](https://pypi.python.org/pypi/aio-geojson-flightairmap)
-
-This library provides convenient async access to local [Flight Air Map](https://www.flightairmap.com/) geojson feed.
+[![Build Status](https://travis-ci.org/kuchel77/python-aio-geojson-flighairmap.svg)](https://travis-ci.org/kuchel77/python-aio-geojson-readsb)
+[![PyPi](https://img.shields.io/pypi/v/aio-geojson-readsb.svg)](https://pypi.python.org/pypi/aio-geojson-readsb)
+[![Version](https://img.shields.io/pypi/pyversions/aio-geojson-readsb.svg)](https://pypi.python.org/pypi/aio-geojson-readsb)
  
 This is an adaption of the [NSW RFS Incidents feed](https://github.com/exxamalte/python-aio-geojson-nsw-rfs-incidents) by Malte Franken.
 
 ## Installation
-`pip install aio-geojson-flightairmap`
+`pip install aio-geojson-readsb`
 
 ## Usage
 See below for examples of how this library can be used. After instantiating a 
@@ -43,12 +40,12 @@ Status Codes
 ```python
 import asyncio
 from aiohttp import ClientSession
-from aio_geojson_flightairmap import FlightAirMapFeed
+from aio_geojson_readsb import readsbFeed
 async def main() -> None:
     async with ClientSession() as websession:    
         # Home Coordinates: Latitude: -33.0, Longitude: 150.0
         # Filter radius: 50 km
-        feed = FlightAirMapFeed(websession, 
+        feed = readsbFeed(websession, 
                 (-33.0, 150.0), 
                 filter_radius=20000)
                 
